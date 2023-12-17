@@ -10,7 +10,7 @@ import { IoMdCloseCircleOutline } from "react-icons/io";
 import "./navb.css";
 import { NavLink } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
-import UserImage from "./Userimage";
+import UserImage from "./Userimage";  
 const Navbar = () => {
   const isAboveSmallScreens = useMediaQuery("(min-width:768px)");
   const [isMenuToggled, setIsMenuToggled] = useState(false);
