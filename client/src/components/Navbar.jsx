@@ -21,7 +21,7 @@ const Navbar = () => {
   const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   const isAboveSmallScreens = useMediaQuery("(min-width:768px)");
   return (
-    <div className="fixed top-[0px] left-[0px] w-full z-4 ">
+    <div className="fixed top-[0px] left-[0px] w-full z-10 ">
     <nav className="h-[63px] bg-black flex w-full text-white">
     <div className="w-[69px]">
             <img src={logo}  />
