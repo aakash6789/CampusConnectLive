@@ -2,6 +2,7 @@ import React from "react";
 import logo from '../assets/campuslogo3.jpg'
 import useMediaQuery from "../hooks/useMediaQuery";
 import { useState,useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const date = new Date();
@@ -41,7 +42,7 @@ const Navbar = () => {
           </div>
           </div>
           <div className="md:ml-[0.8vw] ml-[1.4vw]  mt-[1.6em] ">Contact us</div>
-          <div className="md:ml-[2vw] ml-[5vw] mt-[1.6em] ">Sign in</div>
+          <div className="md:ml-[2vw] ml-[5vw] mt-[1.6em] cursor-pointer "><NavLink to='/register'>Sign up</NavLink></div>
     </nav>
     </div>
   )
