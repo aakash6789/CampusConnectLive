@@ -67,11 +67,11 @@ const Register = () => {
   return (
     <div>
       {flag===1?<Login/>:(
-    <div className='md:h-[1300px] md:pt-[100px] text-white bg-black xs:h-[1200px]'>
-        <h1 className='md:text-8xl font-bebasNeue md:ml-[650px] md:mr-[630px] text-yellow-200 xs:ml-[225px] xs:text-4xl xs:mr-[150px] '>SIGN UP</h1>
+    <div className='md:h-[1300px] md:pt-[100px] text-white  xs:h-[1200px]'>
+        <h1 className='md:text-8xl font-bebasNeue ml-[10vw]  text-yellow-200  xs:text-2xl  '>SIGN UP</h1>
       
        
-      <div className=' bg-white text-black md:w-[720px] md:h-[990px] md:ml-[400px] md:pt-[80px] md:mt-[40px] shadow-md md:shadow-white xs:h-[990px]'>
+      <div className=' bg-white text-black md:w-[720px] md:h-[990px] ml-[10vw] md:pt-[80px] md:mt-[40px] shadow-md md:shadow-white xs:h-[990px]'>
       <form action="" className='xs:mt-[30px] xs:pt-[30px] md:mt-[0px]' onSubmit={handleSubmit(onSubmit,onError)} encType='multipart/formData' >
       <div className='md:text-left xs:text-center'>
             <label htmlFor="email" className='xs:text-left font-roboto md:ml-[31px] xs:mr-[340px]'>Email *</label>
