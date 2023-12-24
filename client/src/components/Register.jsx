@@ -68,10 +68,10 @@ const Register = () => {
     <div>
       {flag===1?<Login/>:(
     <div className='md:h-[1300px] md:pt-[100px] text-white  xs:h-[1200px]'>
-        <h1 className='md:text-8xl font-bebasNeue ml-[6vw]  text-black text-1xl md:mt-[0px] mt-[8vh]  '>SIGN UP</h1>
+        <h1 className='md:text-8xl font-bebasNeue   text-black text-1xl md:mt-[0px] mt-[8vh]  '>SIGN UP</h1>
       
        
-      <div className=' bg-white text-black md:w-[720px] md:h-[990px] ml-[6vw] md:pt-[80px] md:mt-[40px] shadow-md md:shadow-white xs:h-[990px]'>
+      <div className=' bg-white text-black md:w-[720px] md:h-[990px]  md:pt-[80px] md:mt-[40px] shadow-md  xs:h-[990px]'>
       <form action="" className='xs:mt-[30px] xs:pt-[30px] md:mt-[0px]' onSubmit={handleSubmit(onSubmit,onError)} encType='multipart/formData' >
       <div className='md:text-left xs:text-center'>
             <label htmlFor="email" className='xs:text-left font-roboto md:ml-[31px] xs:mr-[340px]'>Email *</label>
@@ -156,9 +156,9 @@ const Register = () => {
         </p>
         </label>
         </div>
-        <p className=' md:pl-[6px] md:mt-[15px] xs:mt-[50px] '>Have an account? <NavLink to='/login' className='text-blue-400' >Login </NavLink> instead</p>
+        <p className=' md:pl-[6px] md:mt-[15px] xs:mt-[15vh] '>Have an account? <NavLink to='/login' className='text-blue-400' >Login </NavLink> instead</p>
         {text && (<p className='text-red-500 text-center pt-[20px]'>{text}</p>)}
-        <button type="submit" className='bg-black text-white md:mt-[25px] md:w-[660px] md:ml-[30px] p-[0.45rem] font-bebasNeue  hover:text-yellow-200 xs:mt-[20px] xs:ml-[60px] xs:w-[386px] xs:mb-[20px]'>Sign up</button>
+        <button type="submit" className='bg-black text-white md:mt-[25px] md:w-[660px]  p-[0.45rem] font-bebasNeue  hover:text-yellow-200 xs:mt-[20px]  xs:w-[386px] xs:mb-[20px]'>Sign up</button>
       </form>
       </div>
       </div>

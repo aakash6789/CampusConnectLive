@@ -5,6 +5,7 @@ import cors from 'cors';
 import morgan from 'morgan';
 import multer from 'multer';
 import { register } from './controllers/Auth.js';
+import authRoutes from './routes/RegisterAuth.js'
 
 
 
@@ -23,6 +24,8 @@ const storage = multer.diskStorage({
     }
   })
 const upload = multer({ storage });
+app.use('/uploads', express.static('uploads'));
+app.use('/auth',authRoutes);
 app.post("/auth/register",upload.single('file'),register,(req,res)=>{
     console.log(req.file);
     console.log("file uploaded");

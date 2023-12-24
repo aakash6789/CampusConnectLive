@@ -4,6 +4,7 @@ import viteLogo from '../src/faviconCCL.svg'
 import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import Login from './components/Login'
 import {
   RouterProvider,
   NavLink,
@@ -26,6 +27,7 @@ const router = createBrowserRouter(
         }
       />
       <Route path="/register" element={<Register/>} />
+      <Route path="/login" element={<Login />} />
     </Route>
   )
 );
