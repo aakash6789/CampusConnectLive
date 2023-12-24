@@ -68,10 +68,10 @@ const Register = () => {
     <div>
       {flag===1?<Login/>:(
     <div className='md:h-[1300px] md:pt-[100px] text-white  xs:h-[1200px]'>
-        <h1 className='md:text-8xl font-bebasNeue ml-[10vw]  text-yellow-200  xs:text-2xl  '>SIGN UP</h1>
+        <h1 className='md:text-8xl font-bebasNeue ml-[6vw]  text-black text-1xl md:mt-[0px] mt-[8vh]  '>SIGN UP</h1>
       
        
-      <div className=' bg-white text-black md:w-[720px] md:h-[990px] ml-[10vw] md:pt-[80px] md:mt-[40px] shadow-md md:shadow-white xs:h-[990px]'>
+      <div className=' bg-white text-black md:w-[720px] md:h-[990px] ml-[6vw] md:pt-[80px] md:mt-[40px] shadow-md md:shadow-white xs:h-[990px]'>
       <form action="" className='xs:mt-[30px] xs:pt-[30px] md:mt-[0px]' onSubmit={handleSubmit(onSubmit,onError)} encType='multipart/formData' >
       <div className='md:text-left xs:text-center'>
             <label htmlFor="email" className='xs:text-left font-roboto md:ml-[31px] xs:mr-[340px]'>Email *</label>
@@ -122,7 +122,7 @@ const Register = () => {
         </div>
 
                   <div className='md:text-left xs:text-center mt-[30px] xs:mb-[10px] md:ml-[32px] md:mb-[10px] '>
-                  <label htmlFor="picture" className='font-roboto md:mr-[130px] xs:mr-[280px]'>Profile Picture*</label>
+                  <label htmlFor="picture" className='font-roboto  xs:mr-[280px]'>Profile Picture*</label>
                   <br/>
                     {/* <input type='file' name='picture' id='picture' className='xs:mr-[90px] xs:mt-[20px] xs:mb-[20px]' {...register("picture",{
               required:true
@@ -145,18 +145,18 @@ const Register = () => {
           {/* <input type="file" name="file"></input> */}
                      </div>
         <div className='flex'>
-        <input type="checkbox" id="consent_checkbox" name="consent_checkbox"  className='md:ml-[30px] h-[20px] mt-[18px] xs:ml-[65px] xs:mt-[5px]' 
+        <input type="checkbox" id="consent_checkbox" name="consent_checkbox"  className='md:ml-[30px] mt-[20px] h-[20px] mt-[25vh] xs:ml-[65px] xs:mt-[5px]' 
         {...register("consent_checkbox",{
           required:true
         })}
         ></input>
         <label htmlFor='consent_checkbox'>
-        <p className='md:ml-[10px] md:w-[660px] rounded-md md:h-[96px] md:mt-[2px] xs:w-[363px] xs:h-[134px] xs:ml-[10px] '>
+        <p className=' md:w-[660px] rounded-md mr-[5vw] md:h-[96px] md:mt-[5vh]  xs:h-[134px] '>
         I consent to receiving marketing communications from Wrestling World and its affiliates about special offers and other products or services based on my information and interests, including how I use and interact with the services, as described in the <a href='https://www.wwe.com/page/privacy-policy' target='_blank' className='text-blue-400'>Privacy Policy</a> . I can unsubscribe at any time using options available in the <a href='https://www.wwe.com/page/privacy-policy' target='_blank' className='text-blue-400'>Privacy Policy</a>.
         </p>
         </label>
         </div>
-        <p className='md:ml-[240px] md:pl-[6px] md:mt-[15px] md:mr-[240px] xs:mt-[50px] xs:ml-[130px]'>Have an account? <NavLink to='/login' className='text-blue-400' >Login </NavLink> instead</p>
+        <p className=' md:pl-[6px] md:mt-[15px] xs:mt-[50px] '>Have an account? <NavLink to='/login' className='text-blue-400' >Login </NavLink> instead</p>
         {text && (<p className='text-red-500 text-center pt-[20px]'>{text}</p>)}
         <button type="submit" className='bg-black text-white md:mt-[25px] md:w-[660px] md:ml-[30px] p-[0.45rem] font-bebasNeue  hover:text-yellow-200 xs:mt-[20px] xs:ml-[60px] xs:w-[386px] xs:mb-[20px]'>Sign up</button>
       </form>

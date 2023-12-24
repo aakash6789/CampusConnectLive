@@ -42,7 +42,7 @@ const Navbar = () => {
           </div>
           </div>
           <div className="md:ml-[0.8vw] ml-[1.4vw]  mt-[1.6em] ">Contact us</div>
-          <div className="md:ml-[2vw] ml-[5vw] mt-[1.6em] cursor-pointer "><NavLink to='/register'>Sign up</NavLink></div>
+          <div className="md:ml-[2vw] ml-[5vw] mt-[1.6em] cursor-pointer"><NavLink to='/register'>Sign up</NavLink></div>
     </nav>
     </div>
   )
