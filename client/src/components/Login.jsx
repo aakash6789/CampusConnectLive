@@ -73,7 +73,7 @@ const Login = () => {
                  localStorage.setItem('jwt',`${token}`);
                  localStorage.setItem('user',`${userJSONString}`);
                    setText("Logged In");
-                  navigate(-1);
+                  navigate('/meet');
                 }
                 else if(res.status===404){
                   setText("User does not exist");

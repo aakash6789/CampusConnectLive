@@ -6,10 +6,13 @@ import morgan from 'morgan';
 import multer from 'multer';
 import { register } from './controllers/Auth.js';
 import authRoutes from './routes/RegisterAuth.js'
-
+import { Server as SocketIO } from 'socket.io';
+import * as http from 'http'
 
 
 const app=express();
+const server = http.createServer(app);
+const io = new SocketIO(server);
 dotenv.config();
 app.use(express.urlencoded({extended:false}));
 app.use(cors({ origin: true, credentials: true })); 
@@ -34,5 +37,5 @@ app.post("/auth/register",upload.single('file'),register,(req,res)=>{
 const port=process.env.PORT;
 mongoose.connect(process.env.MONGO_URL,{
 }).then(()=>{
-app.listen(port, () => console.log('Server listening on port 3000!'));
+server.listen(port, () => console.log('Server listening on port 3000!'));
 }).catch((error)=>console.log(`${error}: DB did not connect`));
