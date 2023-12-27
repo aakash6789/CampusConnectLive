@@ -6,6 +6,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Login from './components/Login'
 import MeetingRoom from './components/MeetingRoom'
+import Lobby from './components/Lobby'
 import {
   RouterProvider,
   NavLink,
@@ -30,6 +31,7 @@ const router = createBrowserRouter(
       <Route path="/register" element={<Register/>} />
       <Route path="/login" element={<Login />} />
       <Route path="/meet" element={<MeetingRoom/>} />
+      <Route path="/lobby" element={<Lobby/>} />
     </Route>
   )
 );
