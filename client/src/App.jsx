@@ -7,6 +7,7 @@ import Hero from './components/Hero'
 import Login from './components/Login'
 import MeetingRoom from './components/MeetingRoom'
 import Lobby from './components/Lobby'
+import { SocketProvider } from '../context/Socket'
 import {
   RouterProvider,
   NavLink,
@@ -30,7 +31,7 @@ const router = createBrowserRouter(
       />
       <Route path="/register" element={<Register/>} />
       <Route path="/login" element={<Login />} />
-      <Route path="/meet" element={<MeetingRoom/>} />
+      <Route path="/room/:roomId" element={<MeetingRoom/>} />
       <Route path="/lobby" element={<Lobby/>} />
     </Route>
   )
@@ -40,7 +41,9 @@ function App() {
 
   return (
     <>
+    <SocketProvider>
       <RouterProvider router={router} />
+      </SocketProvider>
     </>
   )
 }
