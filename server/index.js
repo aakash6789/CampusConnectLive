@@ -32,6 +32,7 @@ app.post("/auth/register",upload.single('file'),register,(req,res)=>{
     console.log("file uploaded");
   });
 const emailToSocketMapping=new Map();
+const socketToEmailMapping= new Map();
 
 io.on("connection",(socket)=>{
   console.log('New connection');
@@ -39,9 +40,16 @@ io.on("connection",(socket)=>{
     const {roomId,emailId}=data;  
     socket.join(roomId);
     emailToSocketMapping.set(emailId,socket.id);
+    socketToEmailMapping.set(socket.id,emailId);
     socket.emit("joined-room",{roomId});
     console.log("User",emailId,"has joined room- ",roomId);
     socket.broadcast.to(roomId).emit('user-joined',{emailId});
+   });
+   socket.on('call-user',data=>{
+    const {emailId,offer}=data;
+    const socketId=emailToSocketMapping.get(emailId);
+    const fromEmail=socketToEmailMapping.get(socket.id);
+    socket.to(socketId).emit("incoming-call",{from:fromEmail,offer});
    })
 
 })

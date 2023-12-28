@@ -20,6 +20,7 @@ const handleRoomJoined=({roomId})=>{
   }
   useEffect(()=>{
     socket.on('joined-room',handleRoomJoined);
+  
   },[socket]);
   
   return (
