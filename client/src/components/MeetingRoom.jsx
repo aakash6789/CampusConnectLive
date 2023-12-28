@@ -8,7 +8,7 @@ const MeetingRoom = () => {
   const handleUserJoined=(data)=>{
     const {emailId}=data;
     console.log("New user joined",emailId);
-  }
+  };
     const {socket} = useSocket();
     useEffect(()=>{
    socket.on("user-joined",handleUserJoined);
