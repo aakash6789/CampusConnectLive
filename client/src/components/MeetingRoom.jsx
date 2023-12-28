@@ -2,12 +2,15 @@ import React, { useEffect } from 'react'
 import io from 'socket.io-client';
 import { useParams } from 'react-router';
 import useSocket from '../hooks/useSocket';
+import usePeer from '../hooks/usePeer';
 const MeetingRoom = () => {
   const {roomId}=useParams();
+  const {peer,createOffer}=usePeer();
 
-  const handleUserJoined=(data)=>{
+  const handleUserJoined=async(data)=>{
     const {emailId}=data;
     console.log("New user joined",emailId);
+    const offer=await createOffer();
   };
     const {socket} = useSocket();
     useEffect(()=>{

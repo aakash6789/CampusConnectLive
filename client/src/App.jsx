@@ -8,6 +8,7 @@ import Login from './components/Login'
 import MeetingRoom from './components/MeetingRoom'
 import Lobby from './components/Lobby'
 import { SocketProvider } from '../context/Socket'
+import { PeerProvider } from '../context/Peer'
 import {
   RouterProvider,
   NavLink,
@@ -42,7 +43,9 @@ function App() {
   return (
     <>
     <SocketProvider>
+      <PeerProvider>
       <RouterProvider router={router} />
+      </PeerProvider>
       </SocketProvider>
     </>
   )
