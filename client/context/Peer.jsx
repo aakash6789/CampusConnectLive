@@ -19,8 +19,14 @@ const createOffer=async()=>{
     await peer.setLocalDescription(offer);
     return offer;
 }
+const createAnswer=async(offer)=>{
+    await peer.setRemoteDescription(offer);
+    const answer= await peer.createAnswer();
+    await peer.setLocalDescription(answer);
+    return answer;
+}
 return(
-    <PeerContext.Provider value={{peer,createOffer}}>
+    <PeerContext.Provider value={{peer,createOffer,createAnswer}}>
         {children}
     </PeerContext.Provider>
 );
