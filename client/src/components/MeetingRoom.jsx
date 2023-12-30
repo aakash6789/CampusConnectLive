@@ -21,14 +21,18 @@ const MeetingRoom = () => {
   const ans=await createAnswer(offer);
   socket.emit('call-accepted',{emailId:from,ans});
   },[]);
+  const handleCallAccepted=useCallback(async(data)=>{
 
+  },[]);
     useEffect(()=>{
    socket.on("user-joined",handleUserJoined);
    socket.on("incoming-call",handleIncomingCall);
+   socket.on("call-accepted",)
 
    return()=>{
     socket.off('user-joined',handleUserJoined);
     socket.off("incoming-call",handleIncomingCall);
+    socket.off("call-accepted",handleCallAccepted);
    }
     },[socket,handleIncomingCall,handleUserJoined]);
 
