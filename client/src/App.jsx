@@ -7,7 +7,7 @@ import Hero from './components/Hero'
 import Login from './components/Login'
 import MeetingRoom from './components/MeetingRoom'
 import Lobby from './components/Lobby'
-import { SocketProvider } from '../context/Socket'
+import { SocketProvider } from '../context/SocketProvider'
 import { PeerProvider } from '../context/Peer'
 import {
   RouterProvider,
@@ -32,7 +32,7 @@ const router = createBrowserRouter(
       />
       <Route path="/register" element={<Register/>} />
       <Route path="/login" element={<Login />} />
-      <Route path="/room/:roomId" element={<MeetingRoom/>} />
+      <Route path="/room/:room" element={<MeetingRoom/>} />
       <Route path="/lobby" element={<Lobby/>} />
     </Route>
   )
